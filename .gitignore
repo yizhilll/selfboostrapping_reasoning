@@ -1,0 +1,24 @@
+# python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+
+# pytorch
+*.pt
+*.pth
+*.pth.tar
+*.pth.tar.gz
+*.pth.tar.xz
+
+# ray
+*.ray
+*.ray.tar
+*.ray.tar.gz
+*.ray.tar.xz
+
+# data folder
+inference_results/
+evaluation/data/
