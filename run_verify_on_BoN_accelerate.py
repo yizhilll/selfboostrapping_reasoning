@@ -802,8 +802,8 @@ def print_type_distribution(type_distribution):
 
 def main(
     local_dir = 'inference_results/infer_result_gen1/infer_result_splitted',
-    file_start=0, 
-    file_end=0,
+    file_start=-1, 
+    file_end=-1,
     compute_correctness=True,
     max_workers_per_batch=128,
     batch_size=2000, # 每个文件的 batch size，这个太大会卡住
@@ -817,7 +817,7 @@ def main(
         all_file_list = sorted(all_file_list)
         # Filter out files that already have correctness scores
         all_file_list = [p for p in all_file_list if '_with_correctness' not in p]
-        if file_start >= 0 and file_end > 0:
+        if file_start >= 0 and file_end >= 0:
             all_file_list = all_file_list[file_start:file_end]
             
         print('Files to process:', len(all_file_list))
