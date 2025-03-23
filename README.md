@@ -3,6 +3,12 @@
 ## self-boostrapping
 
 ```bash
+conda create -n verify python=3.10
+pip install -r requirements.txt
+conda activate verify
+```
+
+```bash
 # 处理所有文件
 PYTHONPATH=$(pwd) python run_verify_on_BoN_accelerate.py \
     --local_dir "inference_results/infer_result_gen1" \
